@@ -19,7 +19,7 @@ apt-get install -qq -y default-jre jenkins >/dev/null
 systemctl enable jenkins
 systemctl start jenkins
 sudo apt install -qq -y tomcat9 tomcat9-admin
-
+sudo apt install -qq -y maven
 echo "[3]: ansible custom"
 sed -i 's/.*pipelining.*/pipelining = True/' /etc/ansible/ansible.cfg
 sed -i 's/.*allow_world_readable_tmpfiles.*/allow_world_readable_tmpfiles = True/' /etc/ansible/ansible.cfg
