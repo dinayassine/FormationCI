@@ -37,6 +37,7 @@ echo "
 }
 " >/etc/docker/daemon.json
 sudo usermod -aG docker jenkins
+sudo echo 'jenkins ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 systemctl restart jenkins
 systemctl daemon-reload
 systemctl restart docker
